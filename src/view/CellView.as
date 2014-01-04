@@ -13,34 +13,10 @@ package view {
 	public class CellView extends Sprite {
 		public static const CELL_SIZE:Number = 32;
 
-		//------------------------------------------
-		// Object Pool
-		private static var _objectPool:Vector.<CellView> = new Vector.<CellView>();
-
-		public static function create():CellView {
-			var result:CellView;
-
-			if (_objectPool.length > 0) {
-				result = _objectPool.pop();
-			} else {
-				result = new CellView(new Lock());
-			}
-			result.reset();
-			return result;
-		}
-		public static function releaseToPool(cellModel:CellView):void {
-			if (_objectPool.indexOf(cellModel) != -1) {
-				_objectPool.push(cellModel);
-			}
-		}
-		//------------------------------------------
-
 		private var _mc:Cell_mc;
 
-		public function CellView(lock:Lock) {
+		public function CellView() {
 			_mc = new Cell_mc();
-			graphics.beginFill(0x990000);
-			graphics.drawRect(0, -32, 32, 32);
 			addChild(_mc);
 		}
 
@@ -54,5 +30,3 @@ package view {
 		}
 	}
 }
-
-class Lock {}

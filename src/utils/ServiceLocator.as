@@ -8,6 +8,9 @@
 package utils {
 	import model.MainModel;
 
+	import presenter.BoardPresenter;
+	import presenter.HUDPresenter;
+
 	import stateMachine.main.MainStateMachine;
 
 	import view.MainView;
@@ -33,14 +36,28 @@ package utils {
 		public function get mainStateMachine():MainStateMachine { return _mainStateMachine;	}
 		public function get mainModel():MainModel { return _mainModel; }
 		public function get mainView():MainView { return _mainView; }
+
+		//--------------------------------------------------------
+		// Game
+		private var _hudPresenter:HUDPresenter;
+		private var _boardPresenter:BoardPresenter;
+
+		public function get hudPresenter():HUDPresenter { return _hudPresenter; }
+		public function get boardPresenter():BoardPresenter { return _boardPresenter; }
+
 		//--------------------------------------------------------
 
+		//--------------------------------------------------------
 		public function ServiceLocator(lock:Lock) {}
 
 		public function init():void {
 			_mainModel = new MainModel();
 			_mainView = new MainView();
 			_mainStateMachine = new MainStateMachine();
+
+			_hudPresenter = new HUDPresenter();
+			_boardPresenter = new BoardPresenter();
+
 		}
 
 

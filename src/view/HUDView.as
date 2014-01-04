@@ -39,11 +39,6 @@ package view {
 			graphics.drawRect(0, 0, 600, 100);
 		}
 
-		public function reset():void {
-			setSecondsElapsed(0);
-			setMinesRemaining(ServiceLocator.instance.mainModel.currentGameModel.boardModel.numMines);
-		}
-
 		public function setMinesRemaining(numMinesRemaining:int):void {
 			_minesCounterLabel.text = String(numMinesRemaining);
 		}

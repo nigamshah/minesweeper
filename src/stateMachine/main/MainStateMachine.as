@@ -40,5 +40,6 @@ package stateMachine.main {
 
 			this.doTransition(startup);
 		}
+
 	}
 }

@@ -41,5 +41,7 @@ package utils {
 			gameModel.boardModel.cells = cells;
 			return gameModel;
 		}
+
+
 	}
 }

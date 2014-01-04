@@ -28,7 +28,8 @@ package stateMachine.main {
 
 			ServiceLocator.instance.mainModel.currentGameModel = GameFactory.createGameModel(gameConfig);
 
-			ServiceLocator.instance.mainView.gameView.reset();
+			ServiceLocator.instance.hudPresenter.reset();
+			ServiceLocator.instance.boardPresenter.reset();
 
 			ServiceLocator.instance.mainView.gameView.visible = true;
 			ServiceLocator.instance.mainView.menuView.visible = false;
