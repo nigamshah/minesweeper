@@ -1,0 +1,19 @@
+HUD
+
+MinesRemaining textfield
+
+Timer textfield
+
+Play Again Button
+
+Menu button
+
+
+Cell
+
+Cell hidden button - up, over, down
+cell revealed - simple gray square
+flag
+bomb
+number of mines textfield
+question mark

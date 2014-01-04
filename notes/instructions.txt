@@ -1,0 +1,25 @@
+Here are the specifications for the minesweeper we'd like you to do for us:
+- language:
+	in AS3
+	you can do a air application or a web page containing the game
+- optional libraries
+	use Starling for the display (http://gamua.com/starling/)
+	use feathers for UI elements (http://feathersui.com/)
+
+- flow:
+	launch the game
+	select a difficulty level (easy, medium, hard)
+	play a round: click to reveal a case, figure out a way to mark mines (maybe press CTRL + click)
+	you win -> "you win" message
+	you lose -> "you lose" message
+	ask the user to start again
+
+Graphic interface does not need much refinement, just enough to play it,
+we will make sure it works as expected and mostly look at the code.
+In particular I would like to see your implementation of an MVC.
+In general we are looking for clean code organization, separation of concern,
+a little bit of object oriented programming and clear model / view separation.
+
+Please publish the code on github and send us the link,
+if you can host a playable version of the game that would also be helpful.
+Make sure you include everyone in this email so it can get reviewed as soon as possible.

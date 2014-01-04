@@ -1,0 +1,124 @@
+-----------------------------------
+App Config
+
+-----------------------------------
+Main App State Machine
+	-	Startup
+	-	MainMenu
+	-	GameReady
+	-	GameInProgress
+	-	GameOver
+
+-----------------------------------
+MainModel
+	-	gameConfigs : Vector<GameConfig> (available are Easy, Medium, Hard)
+	-	currentGameModel : GameModel
+	
+-----------------------------------
+GameConfig
+   -	id
+   -	name (is displayed on the button)
+   -	numColumns
+   -	numRows
+   -	numMines
+
+-----------------------------------
+GameModel
+	-	configId
+	-	gameStart - flashTime in ms (set on GameInProgress onEnter)
+	-	gameTime - in ms (set on game over state onEnter)
+	-	board : Board
+
+GamePresenter
+
+GameView
+
+
+-----------------------------------
+HUDPresenter
+	-	minesRemaining (numMines - numFlags)
+	-	"Play Again" action
+	-	"Main Menu" action
+
+HUDView
+	-	minesRemaining
+	-	timer (in seconds)
+	-	"Play Again" button
+	-	"Main Menu" button
+		
+-----------------------------------
+GameOverPresenter
+	-	gameDuration (ms)
+	-	gameWon - boolean
+	-	"Play Again" action
+	-	"Main Menu" action	
+	
+
+GameOverView
+	-	"You Won" / "You Lost" - Game result message
+	-	game duration display (maybe only if you won)
+	-	"Play Again" button
+	-	"Main Menu" button
+
+-----------------------------------
+Board
+	-	numColumns
+	-	numRows
+	-	numMines
+	-	cells - 1D or 2D vector? both?
+	-	numFlags
+
+BoardPresenter ?
+
+-----------------------------------
+Cell
+	-	columnIndex
+	-	rowIndex
+	
+	-	mineState
+		-	unoccupied
+		-	occupied
+		-	exploded
+
+	-	markedState
+		-	unmarked
+		-	flagged
+		-	questionMarked
+
+	-	revealedState
+		-	hidden
+		-	revealed
+
+	-	numAdjacentMines
+		-	calculated, or set when board is generated
+
+
+CellPresenter
+
+CellView
+
+numAdjacentMinesText
+
+
+-----------------------------------
+InputController
+
+
+-----------------------------------
+Commands
+
+	-	Start Application
+		-	typical startup stuff, loads assets, etc.
+	
+	-	Show Main Menu
+		-	gets the available configs (aka difficulty level)
+		-	displays a button for each of them
+	
+	-	Start Game
+		-	requires a config id to start - this is chosen from the main menu or is the same as previously chosen
+		-	creates a GameModel, assigns it to MainModel
+		-	creates a GameView, which creates a GamePresenter which holds a reference to the gameModel above
+		
+		
+	
+	-	Generate Mines
