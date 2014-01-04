@@ -36,8 +36,8 @@ package model {
 			gameConfig = new GameConfig();
 			gameConfig.id = "hard";
 			gameConfig.description = "Hard: 18x18, 40 mines";
-			gameConfig.numColumns = 18;
-			gameConfig.numRows = 18;
+			gameConfig.numColumns = 15;
+			gameConfig.numRows = 15;
 			gameConfig.numMines = 40;
 			_gameConfigs.push(gameConfig);
 

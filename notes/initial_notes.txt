@@ -17,7 +17,7 @@ MainModel
 -----------------------------------
 GameConfig
    -	id
-   -	name (is displayed on the button)
+   -	description (is displayed on the button)
    -	numColumns
    -	numRows
    -	numMines

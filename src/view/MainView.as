@@ -11,34 +11,24 @@ package view {
 	public class MainView extends Sprite {
 
 		private var _menuView:MenuView;
-		private var _hudView:HUDView;
-		private var _boardView:BoardView;
-
+		private var _gameView:GameView;
 
 		public function get menuView():MenuView {
 			return _menuView;
 		}
-
-		public function get hudView():HUDView {
-			return _hudView;
-		}
-
-		public function get boardView():BoardView {
-			return _boardView;
+		public function get gameView():GameView {
+			return _gameView;
 		}
 
 		public function init():void {
 			_menuView = new MenuView();
-			_hudView = new HUDView();
-			_boardView = new BoardView();
+			_gameView = new GameView();
 
 			_menuView.visible = false;
-			_hudView.visible = false;
-			_boardView.visible = false;
+			_gameView.visible = false;
 
 			addChild(_menuView);
-			addChild(_hudView);
-			addChild(_boardView);
+			addChild(_gameView);
 		}
 
 	}

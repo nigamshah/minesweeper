@@ -8,6 +8,8 @@
 package stateMachine.main {
 	import config.GameConfig;
 
+	import model.GameModel;
+
 	import stateMachine.State;
 	import stateMachine.StateMachine;
 
@@ -22,13 +24,11 @@ package stateMachine.main {
 
 		public override function onEnter(data:Object):void {
 			ServiceLocator.instance.mainView.menuView.visible = true;
-			ServiceLocator.instance.mainView.hudView.visible = false;
-			ServiceLocator.instance.mainView.boardView.visible = false;
+			ServiceLocator.instance.mainView.gameView.visible = false;
 		}
 
 		public override function onExit(data:Object):void {
-			var gameConfig:GameConfig = GameConfig(data);
-			trace("about to set up GameMode of type = " + gameConfig.id);
+			ServiceLocator.instance.mainView.menuView.visible = false;
 		}
 
 	}

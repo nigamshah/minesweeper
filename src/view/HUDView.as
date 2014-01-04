@@ -14,6 +14,8 @@ package view {
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 
+	import utils.ServiceLocator;
+
 	public class HUDView extends Sprite {
 
 		private var _minesCounterLabel:TextField;
@@ -22,10 +24,6 @@ package view {
 
 
 		public function HUDView() {
-
-		}
-
-		public function init():void {
 
 			var mc:HUD_mc = new HUD_mc();
 
@@ -36,6 +34,14 @@ package view {
 			_restartButton.addEventListener(MouseEvent.CLICK, onRestartClick);
 
 			addChild(mc);
+
+			graphics.beginFill(0xcccccc);
+			graphics.drawRect(0, 0, 600, 100);
+		}
+
+		public function reset():void {
+			setSecondsElapsed(0);
+			setMinesRemaining(ServiceLocator.instance.mainModel.currentGameModel.boardModel.numMines);
 		}
 
 		public function setMinesRemaining(numMinesRemaining:int):void {
