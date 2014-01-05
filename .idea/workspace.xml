@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bd4a6dd-3921-44d6-b7bc-f3ecd5d68a66" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/minesweeper/Minesweeper.swf" afterPath="$PROJECT_DIR$/out/production/minesweeper/Minesweeper.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" afterPath="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/HUDPresenter.as" afterPath="$PROJECT_DIR$/src/controller/game/HUDPresenter.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/CellStateMachine.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/CellStateMachine.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/ExplodedState.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/ExplodedState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/FlaggedState.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/FlaggedState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/RevealedState.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/RevealedState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/UnmarkedState.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/UnmarkedState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/GameInProgressState.as" afterPath="$PROJECT_DIR$/src/controller/main/GameInProgressState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/GameLostState.as" afterPath="$PROJECT_DIR$/src/controller/main/GameLostState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/GameReadyState.as" afterPath="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/GameWonState.as" afterPath="$PROJECT_DIR$/src/controller/main/GameWonState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/MainStateMachine.as" afterPath="$PROJECT_DIR$/src/controller/main/MainStateMachine.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/MenuState.as" afterPath="$PROJECT_DIR$/src/controller/main/MenuState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/StartupState.as" afterPath="$PROJECT_DIR$/src/controller/main/StartupState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/stateMachine/StateMachine.as" afterPath="$PROJECT_DIR$/src/controller/stateMachine/StateMachine.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/BoardModel.as" afterPath="$PROJECT_DIR$/src/model/BoardModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/CellModel.as" afterPath="$PROJECT_DIR$/src/model/CellModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/GameModel.as" afterPath="$PROJECT_DIR$/src/model/GameModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/MainModel.as" afterPath="$PROJECT_DIR$/src/model/MainModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/GameFactory.as" afterPath="$PROJECT_DIR$/src/utils/GameFactory.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/CellView.as" afterPath="$PROJECT_DIR$/src/view/CellView.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MenuView.as" afterPath="$PROJECT_DIR$/src/view/MenuView.as" />
     </list>
     <ignored path="minesweeper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,25 +89,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HUDPresenter.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/game/HUDPresenter.as">
+      <file leaf-file-name="GameLostState.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/main/GameLostState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="67" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
+            <state line="23" column="68" selection-start="614" selection-end="614" vertical-scroll-proportion="0.93240094">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#183#209#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameModel.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/GameModel.as">
+      <file leaf-file-name="CellPresenter.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="28" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+            <state line="81" column="31" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#174#199#0" expanded="true" />
+                <element signature="n#!!block;n#create#0;n#CellPresenter#0;n#cell#0" expanded="false" />
+                <element signature="n#!!block;n#releaseToPool#0;n#CellPresenter#0;n#cell#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellStateMachine.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellStateMachine.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="73" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,44 +124,11 @@
       <file leaf-file-name="BoardPresenter.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="38" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
+            <state line="122" column="0" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#183#225#0" expanded="true" />
+                <element signature="n#!!block;n#clearCell#0;n#BoardPresenter#0;n#game#0" expanded="false" />
                 <element signature="n#!!block;n#getAllNeighbors#0;n#BoardPresenter#0;n#game#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardModel.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="0" selection-start="3279" selection-end="3279" vertical-scroll-proportion="0.33333334">
-              <folding>
-                <element signature="e#173#213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellModel.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/CellModel.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!block;n#create#0;n#CellModel#0;n#model#0" expanded="false" />
-                <element signature="n#!!block;n#releaseToPool#0;n#CellModel#0;n#model#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameInProgressState.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/main/GameInProgressState.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="46" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,22 +147,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/model/MainModel.as" />
-        <option value="$PROJECT_DIR$/src/utils/GameFactory.as" />
-        <option value="$PROJECT_DIR$/src/view/MenuView.as" />
-        <option value="$PROJECT_DIR$/src/controller/game/cell/FlaggedState.as" />
-        <option value="$PROJECT_DIR$/src/model/GameModel.as" />
         <option value="$PROJECT_DIR$/src/controller/main/StartupState.as" />
         <option value="$PROJECT_DIR$/src/view/MainView.as" />
         <option value="$PROJECT_DIR$/src/controller/stateMachine/StateMachine.as" />
         <option value="$PROJECT_DIR$/src/controller/main/MainStateMachine.as" />
         <option value="$PROJECT_DIR$/src/controller/game/HUDPresenter.as" />
-        <option value="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
-        <option value="$PROJECT_DIR$/src/controller/main/GameInProgressState.as" />
         <option value="$PROJECT_DIR$/src/model/CellModel.as" />
         <option value="$PROJECT_DIR$/src/model/BoardModel.as" />
         <option value="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" />
+        <option value="$PROJECT_DIR$/src/controller/game/cell/ExplodedState.as" />
+        <option value="$PROJECT_DIR$/src/controller/game/cell/RevealedState.as" />
+        <option value="$PROJECT_DIR$/src/controller/main/GameInProgressState.as" />
+        <option value="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
+        <option value="$PROJECT_DIR$/src/controller/game/cell/CellStateMachine.as" />
+        <option value="$PROJECT_DIR$/src/controller/main/GameWonState.as" />
         <option value="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" />
+        <option value="$PROJECT_DIR$/src/controller/main/GameLostState.as" />
       </list>
     </option>
   </component>
@@ -410,6 +381,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minesweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minesweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="notes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -441,6 +438,7 @@
     <property name="options.lastSelected" value="preferences.editor" />
     <property name="recentsLimit" value="5" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -776,68 +774,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellStateMachine.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="42" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/main/MenuState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/main/StartupState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainView.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ServiceLocator.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="41" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GameView.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/stateMachine/StateMachine.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="617" selection-end="617" vertical-scroll-proportion="0.39312038">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/main/MainStateMachine.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="64" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/game/HUDPresenter.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="67" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
@@ -867,27 +803,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/main/MainStateMachine.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="812" selection-end="812" vertical-scroll-proportion="0.39548022">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/GameReadyState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.39548022">
+        <state line="28" column="24" selection-start="608" selection-end="608" vertical-scroll-proportion="0.46575344">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/FlaggedState.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/UnmarkedState.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/RevealedState.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="1" selection-start="661" selection-end="661" vertical-scroll-proportion="0.63013697">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="24" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.3328767">
+          <folding>
+            <element signature="e#173#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/main/GameWonState.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="9" selection-start="441" selection-end="524" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/ExplodedState.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#188#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/GameInProgressState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="46" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
+        <state line="24" column="79" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellStateMachine.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="73" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="24" selection-start="2173" selection-end="2173" vertical-scroll-proportion="0.33333334">
+        <state line="81" column="31" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!block;n#create#0;n#CellPresenter#0;n#cell#0" expanded="false" />
             <element signature="n#!!block;n#releaseToPool#0;n#CellPresenter#0;n#cell#0" expanded="false" />
@@ -897,19 +900,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="38" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
+        <state line="122" column="0" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#183#225#0" expanded="true" />
+            <element signature="n#!!block;n#clearCell#0;n#BoardPresenter#0;n#game#0" expanded="false" />
             <element signature="n#!!block;n#getAllNeighbors#0;n#BoardPresenter#0;n#game#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
+    <entry file="file://$PROJECT_DIR$/src/controller/main/GameLostState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="3279" selection-end="3279" vertical-scroll-proportion="0.33333334">
+        <state line="23" column="68" selection-start="614" selection-end="614" vertical-scroll-proportion="0.93240094">
           <folding>
-            <element signature="e#173#213#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

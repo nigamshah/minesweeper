@@ -22,12 +22,12 @@ package controller.main {
 			super(ID, machine);
 		}
 
-		public override function onEnter(data:Object):void {
+		override public function onEnter(data:Object):void {
 			ServiceLocator.instance.mainView.menuView.visible = true;
 			ServiceLocator.instance.mainView.gameView.visible = false;
 		}
 
-		public override function onExit(data:Object):void {
+		override public function onExit(data:Object):void {
 			ServiceLocator.instance.mainView.menuView.visible = false;
 		}
 

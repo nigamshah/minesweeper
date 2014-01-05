@@ -16,7 +16,7 @@ package controller.game.cell {
 			super(ID,  machine);
 		}
 
-		public override function onEnter(data:Object):void {
+		override public function onEnter(data:Object):void {
 			var presenter:CellPresenter = CellStateMachine(_machine).presenter;
 			presenter.cellView.setFlag(false);
 			presenter.cellView.setHidden(false);

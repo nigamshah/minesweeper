@@ -18,12 +18,12 @@ package controller.game.cell {
 			super(ID,  machine);
 		}
 
-		public override function onEnter(data:Object):void {
+		override public function onEnter(data:Object):void {
 			var presenter:CellPresenter = CellStateMachine(_machine).presenter;
 			presenter.cellView.setFlag(true);
 			ServiceLocator.instance.mainModel.currentGameModel.boardModel.addFlag();
 		}
-		public override function onExit(data:Object):void {
+		override public function onExit(data:Object):void {
 			var presenter:CellPresenter = CellStateMachine(_machine).presenter;
 			presenter.cellView.setFlag(false);
 			ServiceLocator.instance.mainModel.currentGameModel.boardModel.removeFlag();

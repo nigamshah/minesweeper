@@ -27,7 +27,7 @@ package controller.game.cell {
 			_presenter = presenter;
 		}
 
-		public override function init():void {
+		override public function init():void {
 
 			// states
 			var unmarked:State = new UnmarkedState(this);

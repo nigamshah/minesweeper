@@ -18,7 +18,7 @@ package controller.main {
 			super(ID, machine);
 		}
 
-		public override function onEnter(data:Object):void {
+		override public function onEnter(data:Object):void {
 			// any other startup stuff before the main menu goes here...
 			ServiceLocator.instance.mainView.init();
 

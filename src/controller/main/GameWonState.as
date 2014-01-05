@@ -15,5 +15,9 @@ package controller.main {
 		public function GameWonState(machine:StateMachine) {
 			super(ID, machine);
 		}
+
+		override public function onEnter(data:Object):void {
+			trace("YOU WIN!!!!");
+		}
 	}
 }

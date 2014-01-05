@@ -114,6 +114,16 @@ package controller.game {
 			}
 		}
 
+		public function revealAllMines():void {
+			for each (var column:Vector.<CellPresenter> in _cells) {
+				for each (var cell:CellPresenter in column) {
+					if (cell.cellModel.occupied) {
+						cell.revealCell();
+					}
+				}
+			}
+		}
+
 
 
 		public function dispose():void {

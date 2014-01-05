@@ -21,7 +21,7 @@ package controller.main {
 
 		public function MainStateMachine() {}
 
-		public override function init():void {
+		override public function init():void {
 
 			//---------------
 			// states

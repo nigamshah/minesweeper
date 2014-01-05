@@ -21,12 +21,12 @@ package controller.main {
 		public function GameInProgressState(machine:StateMachine) {
 			super(ID, machine);
 		}
-		public override function onEnter(data:Object):void {
+		override public function onEnter(data:Object):void {
 			ServiceLocator.instance.mainModel.currentGameModel.boardModel.addEventListener(BoardModel.BOARD_CLEARED, onBoardCleared);
 			ServiceLocator.instance.mainModel.currentGameModel.startGame();
 			ServiceLocator.instance.hudPresenter.startGame();
 		}
-		public override function onExit(data:Object):void {
+		override public function onExit(data:Object):void {
 			ServiceLocator.instance.mainModel.currentGameModel.endGame();
 			ServiceLocator.instance.hudPresenter.endGame();
 		}

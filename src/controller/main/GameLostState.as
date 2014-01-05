@@ -9,12 +9,19 @@ package controller.main {
 	import controller.stateMachine.State;
 	import controller.stateMachine.StateMachine;
 
+	import utils.ServiceLocator;
+
 	public class GameLostState extends State {
 
 		public static const ID:String = "gameWon";
 
 		public function GameLostState(machine:StateMachine) {
 			super(ID, machine);
+		}
+
+		override public function onEnter(data:Object):void {
+			trace("YOU LOSE!!!!");
+			ServiceLocator.instance.boardPresenter.revealAllMines();
 		}
 	}
 }

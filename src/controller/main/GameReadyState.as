@@ -26,7 +26,7 @@ package controller.main {
 			super(ID, machine);
 		}
 
-		public override function onEnter(data:Object):void {
+		override public function onEnter(data:Object):void {
 			var gameConfig:GameConfig = GameConfig(data);
 			trace("about to set up GameModel of type = " + gameConfig.id);
 
