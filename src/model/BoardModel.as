@@ -75,12 +75,16 @@ package model {
 			var row:int;
 
 			for (col = 0; col < _numColumns; col++) {
-				if (col < cellModel.columnIndex - safeRange || col > cellModel.columnIndex + safeRange) {
-					for (row = 0; row < _numRows; row++) {
-						if (row < cellModel.rowIndex - safeRange || row > cellModel.rowIndex + safeRange) {
-							eligibleCells.push(_cells[col][row]);
-						}
-					}
+				for (row = 0; row < _numRows; row++) {
+
+					// is it a neighbor? then continue
+					if (col >= cellModel.columnIndex - 1 &&
+						col <= cellModel.columnIndex + 1 &&
+						row >= cellModel.rowIndex - 1 &&
+						row <= cellModel.rowIndex + 1) continue;
+
+					// else it is eligible
+					eligibleCells.push(_cells[col][row]);
 				}
 			}
 

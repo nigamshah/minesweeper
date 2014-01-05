@@ -68,16 +68,24 @@ package controller.game.cell {
 			trace("clicked on cell = " + _cellModel.columnIndex, + _cellModel.rowIndex);
 
 			if (ServiceLocator.instance.inputController.ctlDown) {
-				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_TOGGLE_FLAG);
+				ServiceLocator.instance.boardPresenter.toggleFlag(this);
 			} else {
-				ServiceLocator.instance.boardPresenter.onClearCell(this);
-				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_USER_CLEAR_CELL);
-				if (_cellModel.occupied) {
-					_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_MINE_TRIPPED);
-				}
+				ServiceLocator.instance.boardPresenter.clearCell(this);
 			}
 		}
 
+		public function toggleFlag():void {
+			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_TOGGLE_FLAG);
+		}
+		public function revealCell():void {
+			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_SYSTEM_REVEAL_CELL);
+		}
+		public function clearCell():void {
+			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_USER_CLEAR_CELL);
+			if (_cellModel.occupied) {
+				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_MINE_TRIPPED);
+			}
+		}
 	}
 }
 class Lock {}

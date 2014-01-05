@@ -7,6 +7,7 @@
  */
 package controller.game {
 	import controller.game.cell.CellPresenter;
+	import controller.game.cell.CellPresenter;
 
 	import flash.crypto.generateRandomBytes;
 
@@ -50,11 +51,57 @@ package controller.game {
 			_boardView.resetPosition();
 		}
 
-		public function onClearCell(cell:CellPresenter):void {
+		public function toggleFlag(cell:CellPresenter):void {
+			cell.toggleFlag();
+			// TODO: update num flags on board model and broadcast to hud
+		}
+		public function clearCell(cell:CellPresenter):void {
 			if (_boardModel.numMines == 0) {
 				generateMines(cell);
 			}
+
+			// do the cascade thing
+			// use a queue instead of open them right away
+			// allows for use of a cascade animation or some other visual aid
+			var queue:Vector.<CellPresenter> = new Vector.<CellPresenter>();
+
+			var queueCell:Function = function(cell:CellPresenter):void {
+				if (!cell.cellModel.occupied) {
+					if (queue.indexOf(cell) == -1) {
+						queue.push(cell);
+						if (cell.cellModel.numAdjacentMines == 0) {
+							var neighbors:Vector.<CellPresenter> = getAllNeighbors(cell);
+							for each(var neighbor:CellPresenter in neighbors) {
+								queueCell(neighbor);
+							}
+						}
+					}
+				}
+			};
+
+			queueCell(cell);
+			cell.clearCell();
+			for (var i:int = 1; i < queue.length; i++) {
+				queue[i].revealCell();
+			}
 		}
+
+		private function getAllNeighbors(cell:CellPresenter):Vector.<CellPresenter> {
+			var result:Vector.<CellPresenter> = new Vector.<CellPresenter>();
+
+			var col:int = cell.cellModel.columnIndex;
+			var row:int = cell.cellModel.rowIndex;
+
+			for (var adjCol:int = col - 1; adjCol <= col + 1; adjCol++) {
+				if (adjCol < 0 || adjCol >= _boardModel.numColumns) continue;
+				for (var adjRow:int = row - 1; adjRow <= row + 1; adjRow++) {
+					if (adjRow < 0 || adjRow >= _boardModel.numRows || (adjCol == col && adjRow == row)) continue;
+					result.push(_cells[adjCol][adjRow]);
+				}
+			}
+			return result;
+		}
+
 
 		private function generateMines(cellPresenter:CellPresenter):void {
 			_boardModel.generateMines(cellPresenter.cellModel);
@@ -65,8 +112,9 @@ package controller.game {
 					cell.cellView.setNumAdjacentMines(cell.cellModel.numAdjacentMines);
 				}
 			}
-
 		}
+
+
 
 		public function dispose():void {
 			for each (var col:Vector.<CellPresenter> in _cells) {
