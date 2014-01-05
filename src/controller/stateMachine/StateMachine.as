@@ -20,9 +20,11 @@ package controller.stateMachine {
 		protected function doTransition(targetState:State, data:Object = null):void {
 			if (!targetState || _currentState == targetState) return;
 			if (_currentState) {
+				trace("leaving state " + _currentState.id);
 				_currentState.onExit(data);
 			}
 			_currentState = targetState;
+			trace("entering state " + _currentState.id);
 			_currentState.onEnter(data);
 		}
 

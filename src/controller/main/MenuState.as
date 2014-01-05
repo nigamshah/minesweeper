@@ -5,7 +5,7 @@
  * Time: 12:53 AM
  * To change this template use File | Settings | File Templates.
  */
-package controller.stateMachine.main {
+package controller.main {
 	import config.GameConfig;
 
 	import model.GameModel;

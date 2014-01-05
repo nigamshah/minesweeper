@@ -74,20 +74,13 @@ BoardPresenter ?
 Cell
 	-	columnIndex
 	-	rowIndex
-	
-	-	mineState
-		-	unoccupied
-		-	occupied
-		-	exploded
+	-	occupied
 
-	-	markedState
+	-	state
 		-	unmarked
 		-	flagged
-		-	questionMarked
-
-	-	revealedState
-		-	hidden
 		-	revealed
+		-	exploded
 
 	-	numAdjacentMines
 		-	calculated, or set when board is generated

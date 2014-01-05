@@ -5,10 +5,7 @@
  * Time: 12:50 AM
  * To change this template use File | Settings | File Templates.
  */
-package controller.stateMachine.main {
-	import flash.events.Event;
-
-	import controller.stateMachine.State;
+package controller.main {
 	import controller.stateMachine.StateMachine;
 
 	public class MainStateMachine extends StateMachine {

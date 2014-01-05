@@ -18,7 +18,7 @@ package {
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
 
-			ServiceLocator.instance.init();
+			ServiceLocator.instance.init(this);
 			addChild(ServiceLocator.instance.mainView);
 			ServiceLocator.instance.mainStateMachine.init();
 

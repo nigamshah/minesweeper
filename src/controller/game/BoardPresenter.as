@@ -6,6 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 package controller.game {
+	import controller.game.cell.CellPresenter;
+
 	import model.BoardModel;
 
 	import utils.ServiceLocator;

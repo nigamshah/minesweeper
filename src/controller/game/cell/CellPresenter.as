@@ -5,11 +5,15 @@
  * Time: 5:21 PM
  * To change this template use File | Settings | File Templates.
  */
-package controller.game {
+package controller.game.cell {
+
+	import controller.game.cell.CellStateMachine;
 
 	import flash.events.MouseEvent;
 
 	import model.CellModel;
+
+	import utils.ServiceLocator;
 
 	import view.CellView;
 
@@ -39,6 +43,7 @@ package controller.game {
 
 		private var _cellView:CellView;
 		private var _cellModel:CellModel;
+		private var _cellStateMachine:CellStateMachine;
 
 		public function get cellView():CellView {
 			return _cellView;
@@ -50,16 +55,26 @@ package controller.game {
 
 		public function CellPresenter(lock:Lock) {
 			_cellView = new CellView();
-			_cellView.addEventListener(MouseEvent.CLICK, onCellClick);
-
+			_cellView.addEventListener(MouseEvent.CLICK, onClick);
+			_cellStateMachine = new CellStateMachine(this);
+			_cellStateMachine.init();
 		}
 
 		public function reset():void {
 			_cellView.reset();
+			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_RESET);
 		}
-		private function onCellClick(evt:MouseEvent):void {
+		private function onClick(evt:MouseEvent):void {
 			trace("clicked on cell = " + _cellModel.columnIndex, + _cellModel.rowIndex);
 
+			if (ServiceLocator.instance.inputController.ctlDown) {
+				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_TOGGLE_FLAG);
+			} else {
+				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_USER_CLEAR_CELL);
+				if (_cellModel.occupied) {
+					_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_MINE_TRIPPED);
+				}
+			}
 		}
 	}
 }

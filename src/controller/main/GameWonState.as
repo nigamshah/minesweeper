@@ -5,7 +5,7 @@
  * Time: 12:56 AM
  * To change this template use File | Settings | File Templates.
  */
-package controller.stateMachine.main {
+package controller.main {
 	import controller.stateMachine.State;
 	import controller.stateMachine.StateMachine;
 

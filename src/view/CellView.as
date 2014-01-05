@@ -28,5 +28,21 @@ package view {
 			_mc.numAdjacentMinesText.text = "";
 			_mc.cellBackingExploded.visible = false;
 		}
+
+		public function setFlag(val:Boolean):void {
+			_mc.flag.visible = val;
+		}
+		public function setHidden(val:Boolean):void {
+			_mc.cellHidden.visible = val;
+		}
+		public function setMine(val:Boolean):void {
+			_mc.mine.visible = val;
+		}
+		public function setNumAdjacentMines(num:int):void {
+			_mc.numAdjacentMinesText.text = String(num);
+		}
+		public function setExploded(val:Boolean):void {
+			_mc.cellBackingExploded.visible = val;
+		}
 	}
 }
