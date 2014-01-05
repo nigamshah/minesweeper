@@ -33,6 +33,8 @@ package model {
 		private var _rowIndex:int;
 		private var _occupied:Boolean;
 		private var _numAdjacentMines:int;
+		private var _revealed:Boolean;
+
 
 		// properties
 		public function get columnIndex():int {
@@ -66,6 +68,14 @@ package model {
 		public function set numAdjacentMines(value:int):void {
 			_numAdjacentMines = value;
 		}
+		public function get revealed():Boolean {
+			return _revealed;
+		}
+
+		public function set revealed(value:Boolean):void {
+			_revealed = value;
+		}
+
 
 		public function CellModel(lock:Lock) {}
 

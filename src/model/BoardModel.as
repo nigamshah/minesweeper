@@ -6,50 +6,42 @@
  * To change this template use File | Settings | File Templates.
  */
 package model {
-	import flashx.textLayout.factory.TruncationOptions;
+	import controller.main.MainStateMachine;
+
+	import flash.events.Event;
+
+	import flash.events.EventDispatcher;
+	import flash.utils.Dictionary;
 
 	import utils.EnumerableUtils;
 	import utils.IDisposable;
 	import utils.ServiceLocator;
 
-	public class BoardModel implements IDisposable {
+	public class BoardModel extends EventDispatcher implements IDisposable {
+		public static const BOARD_CLEARED:String = "boardCleared";
 
 		private var _numColumns:int;
 		private var _numRows:int;
 		private var _numMines:int;
 		private var _numFlags:int;
 		private var _cells:Vector.<Vector.<CellModel>>;
+		private var _cellStatus:Dictionary;
+		private var _numClearedCells:int;
 
 		public function get numColumns():int {
 			return _numColumns;
-		}
-
-		public function set numColumns(value:int):void {
-			_numColumns = value;
 		}
 
 		public function get numRows():int {
 			return _numRows;
 		}
 
-		public function set numRows(value:int):void {
-			_numRows = value;
-		}
-
 		public function get numMines():int {
 			return _numMines;
 		}
 
-		public function set numMines(value:int):void {
-			_numMines = value;
-		}
-
 		public function get numFlags():int {
 			return _numFlags;
-		}
-
-		public function set numFlags(value:int):void {
-			_numFlags = value;
 		}
 
 		public function get cells():Vector.<Vector.<CellModel>> {
@@ -60,12 +52,17 @@ package model {
 			_cells = value;
 		}
 
-		public function BoardModel() {
-
+		public function BoardModel(numCols:int, numRows:int) {
+			_numColumns = numCols;
+			_numRows = numRows;
+			_numMines = 0;
+			_numFlags = 0;
+			_numClearedCells = 0;
 		}
 
 		public function generateMines(cellModel:CellModel):void {
 			trace("boardModel.generateMines");
+			_cellStatus = new Dictionary(true);
 
 			// determine eligible cells, put them in a 1D array
 			var eligibleCells:Array = new Array();
@@ -76,12 +73,11 @@ package model {
 
 			for (col = 0; col < _numColumns; col++) {
 				for (row = 0; row < _numRows; row++) {
-
 					// is it a neighbor? then continue
-					if (col >= cellModel.columnIndex - 1 &&
-						col <= cellModel.columnIndex + 1 &&
-						row >= cellModel.rowIndex - 1 &&
-						row <= cellModel.rowIndex + 1) continue;
+					if (col >= cellModel.columnIndex - safeRange &&
+						col <= cellModel.columnIndex + safeRange &&
+						row >= cellModel.rowIndex - safeRange &&
+						row <= cellModel.rowIndex + safeRange) continue;
 
 					// else it is eligible
 					eligibleCells.push(_cells[col][row]);
@@ -118,8 +114,23 @@ package model {
 
 				}
 			}
+			dispatchEvent(new Event(Event.CHANGE));
+		}
 
-
+		public function clearCell():void {
+			_numClearedCells++;
+			if (_numClearedCells == (_numColumns * _numRows) - _numMines) {
+				dispatchEvent(new Event(BOARD_CLEARED));
+			}
+			dispatchEvent(new Event(Event.CHANGE));
+		}
+		public function addFlag():void {
+			_numFlags++;
+			dispatchEvent(new Event(Event.CHANGE));
+		}
+		public function removeFlag():void {
+			_numFlags--;
+			dispatchEvent(new Event(Event.CHANGE));
 		}
 
 		public function dispose():void {

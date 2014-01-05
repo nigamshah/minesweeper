@@ -9,11 +9,30 @@ package controller.main {
 	import controller.stateMachine.State;
 	import controller.stateMachine.StateMachine;
 
+	import flash.events.Event;
+
+	import model.BoardModel;
+
+	import utils.ServiceLocator;
+
 	public class GameInProgressState extends State {
 		public static const ID:String = "gameInProgress";
 
 		public function GameInProgressState(machine:StateMachine) {
 			super(ID, machine);
+		}
+		public override function onEnter(data:Object):void {
+			ServiceLocator.instance.mainModel.currentGameModel.boardModel.addEventListener(BoardModel.BOARD_CLEARED, onBoardCleared);
+			ServiceLocator.instance.mainModel.currentGameModel.startGame();
+			ServiceLocator.instance.hudPresenter.startGame();
+		}
+		public override function onExit(data:Object):void {
+			ServiceLocator.instance.mainModel.currentGameModel.endGame();
+			ServiceLocator.instance.hudPresenter.endGame();
+		}
+
+		private function onBoardCleared(evt:Event):void {
+			_machine.handleTrigger(MainStateMachine.TRIGGER_BOARD_CLEARED);
 		}
 	}
 }

@@ -20,11 +20,7 @@ package utils {
 			var gameModel:GameModel = new GameModel();
 			gameModel.gameConfig = gameConfig;
 
-			gameModel.boardModel = new BoardModel();
-			gameModel.boardModel.numColumns = gameConfig.numColumns;
-			gameModel.boardModel.numRows= gameConfig.numRows;
-			gameModel.boardModel.numMines = 0;
-			gameModel.boardModel.numFlags = 0;
+			gameModel.boardModel = new BoardModel(gameConfig.numColumns, gameConfig.numRows);
 
 			// cells
 			var cells:Vector.<Vector.<CellModel>> = new Vector.<Vector.<CellModel>>();

@@ -8,6 +8,8 @@
 package model {
 	import config.GameConfig;
 
+	import flash.utils.getTimer;
+
 	public class GameModel {
 
 		private var _gameConfig:GameConfig;
@@ -35,19 +37,18 @@ package model {
 			return _gameStart;
 		}
 
-		public function set gameStart(value:uint):void {
-			_gameStart = value;
-		}
-
 		public function get gameDuration():uint {
 			return _gameDuration;
 		}
 
-		public function set gameDuration(value:uint):void {
-			_gameDuration = value;
+		public function GameModel() {
 		}
 
-		public function GameModel() {
+		public function startGame():void {
+			_gameStart = getTimer();
+		}
+		public function endGame():void {
+			_gameDuration = getTimer() - _gameStart;
 		}
 	}
 }

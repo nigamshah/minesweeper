@@ -22,7 +22,7 @@ package model {
 			gameConfig.description = "Easy: 9x9, 10 mines";
 			gameConfig.numColumns = 9;
 			gameConfig.numRows = 9;
-			gameConfig.numMines = 20;
+			gameConfig.numMines = 10;
 			gameConfig.forceCascadeFirstMove = true;
 			_gameConfigs.push(gameConfig);
 

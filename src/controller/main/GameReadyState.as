@@ -11,6 +11,10 @@ package controller.main {
 	import controller.stateMachine.State;
 	import controller.stateMachine.StateMachine;
 
+	import flash.events.Event;
+
+	import model.BoardModel;
+
 	import utils.GameFactory;
 
 	import utils.ServiceLocator;

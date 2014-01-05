@@ -12,6 +12,8 @@ package view {
 
 	import config.GameConfig;
 
+	import controller.main.MainStateMachine;
+
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
 	import flash.utils.Dictionary;
@@ -53,7 +55,7 @@ package view {
 			if (!btn) throw new Error("Target is not a menu button");
 			var gameConfig:GameConfig = GameConfig(_buttons[btn]);
 			trace("clicked on -- " + gameConfig.id);
-			ServiceLocator.instance.mainStateMachine.handleTrigger("levelSelected", gameConfig);
+			ServiceLocator.instance.mainStateMachine.handleTrigger(MainStateMachine.TRIGGER_LEVEL_SELECTED, gameConfig);
 
 		}
 	}

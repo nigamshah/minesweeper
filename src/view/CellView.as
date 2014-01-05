@@ -23,7 +23,7 @@ package view {
 		public function reset():void {
 			_mc.flag.visible = false;
 			_mc.cellHidden.visible = true;
-			_mc.cellHidden.alpha = 1;
+			_mc.cellHidden.alpha = 0.8;
 			_mc.mine.visible = false;
 			_mc.numAdjacentMinesText.visible = true;
 			_mc.numAdjacentMinesText.text = "";

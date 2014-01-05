@@ -19,11 +19,11 @@ package controller.main {
 		}
 
 		public override function onEnter(data:Object):void {
+			// any other startup stuff before the main menu goes here...
 			ServiceLocator.instance.mainView.init();
 
-			// any other startup stuff before the main menu goes here...
 
-			_machine.handleTrigger("startupComplete");
+			_machine.handleTrigger(MainStateMachine.TRIGGER_STARTUP_COMPLETE);
 		}
 
 

@@ -65,8 +65,6 @@ package controller.game.cell {
 			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_RESET);
 		}
 		private function onClick(evt:MouseEvent):void {
-			trace("clicked on cell = " + _cellModel.columnIndex, + _cellModel.rowIndex);
-
 			if (ServiceLocator.instance.inputController.ctlDown) {
 				ServiceLocator.instance.boardPresenter.toggleFlag(this);
 			} else {
@@ -79,9 +77,11 @@ package controller.game.cell {
 		}
 		public function revealCell():void {
 			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_SYSTEM_REVEAL_CELL);
+			cellModel.revealed = true;
 		}
 		public function clearCell():void {
 			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_USER_CLEAR_CELL);
+			cellModel.revealed = true;
 			if (_cellModel.occupied) {
 				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_MINE_TRIPPED);
 			}

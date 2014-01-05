@@ -7,12 +7,9 @@
  */
 package controller.game {
 	import controller.game.cell.CellPresenter;
-	import controller.game.cell.CellPresenter;
-
-	import flash.crypto.generateRandomBytes;
+	import controller.main.MainStateMachine;
 
 	import model.BoardModel;
-	import model.CellModel;
 
 	import utils.ServiceLocator;
 
@@ -53,20 +50,20 @@ package controller.game {
 
 		public function toggleFlag(cell:CellPresenter):void {
 			cell.toggleFlag();
-			// TODO: update num flags on board model and broadcast to hud
 		}
 		public function clearCell(cell:CellPresenter):void {
 			if (_boardModel.numMines == 0) {
 				generateMines(cell);
+				ServiceLocator.instance.mainStateMachine.handleTrigger(MainStateMachine.TRIGGER_MINES_GENERATED);
 			}
 
-			// do the cascade thing
+			// do the cascade
 			// use a queue instead of open them right away
 			// allows for use of a cascade animation or some other visual aid
 			var queue:Vector.<CellPresenter> = new Vector.<CellPresenter>();
 
 			var queueCell:Function = function(cell:CellPresenter):void {
-				if (!cell.cellModel.occupied) {
+				if (!cell.cellModel.revealed && !cell.cellModel.occupied) {
 					if (queue.indexOf(cell) == -1) {
 						queue.push(cell);
 						if (cell.cellModel.numAdjacentMines == 0) {
@@ -81,8 +78,11 @@ package controller.game {
 
 			queueCell(cell);
 			cell.clearCell();
+			_boardModel.clearCell();
+
 			for (var i:int = 1; i < queue.length; i++) {
 				queue[i].revealCell();
+				_boardModel.clearCell();
 			}
 		}
 

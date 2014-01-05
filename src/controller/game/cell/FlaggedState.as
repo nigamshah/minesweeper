@@ -9,6 +9,8 @@ package controller.game.cell {
 	import controller.stateMachine.State;
 	import controller.stateMachine.StateMachine;
 
+	import utils.ServiceLocator;
+
 	public class FlaggedState extends State {
 		public static const ID:String = "flagged";
 
@@ -19,10 +21,12 @@ package controller.game.cell {
 		public override function onEnter(data:Object):void {
 			var presenter:CellPresenter = CellStateMachine(_machine).presenter;
 			presenter.cellView.setFlag(true);
+			ServiceLocator.instance.mainModel.currentGameModel.boardModel.addFlag();
 		}
 		public override function onExit(data:Object):void {
 			var presenter:CellPresenter = CellStateMachine(_machine).presenter;
 			presenter.cellView.setFlag(false);
+			ServiceLocator.instance.mainModel.currentGameModel.boardModel.removeFlag();
 		}
 	}
 }
