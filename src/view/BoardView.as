@@ -13,7 +13,7 @@ package view {
 
 	import model.BoardModel;
 
-	import presenter.BoardPresenter;
+	import controller.game.BoardPresenter;
 
 	import utils.ServiceLocator;
 

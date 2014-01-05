@@ -5,7 +5,7 @@
  * Time: 5:22 PM
  * To change this template use File | Settings | File Templates.
  */
-package presenter {
+package controller.game {
 	import utils.ServiceLocator;
 
 	import view.HUDView;

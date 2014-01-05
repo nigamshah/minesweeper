@@ -5,9 +5,9 @@
  * Time: 12:56 AM
  * To change this template use File | Settings | File Templates.
  */
-package stateMachine.main {
-	import stateMachine.State;
-	import stateMachine.StateMachine;
+package controller.stateMachine.main {
+	import controller.stateMachine.State;
+	import controller.stateMachine.StateMachine;
 
 	public class GameWonState extends State {
 		public static const ID:String = "gameWon";

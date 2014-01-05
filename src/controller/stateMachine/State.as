@@ -5,7 +5,7 @@
  * Time: 11:42 PM
  * To change this template use File | Settings | File Templates.
  */
-package stateMachine {
+package controller.stateMachine {
 	import flash.net.ObjectEncoding;
 	import flash.utils.Dictionary;
 

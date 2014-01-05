@@ -5,7 +5,7 @@
  * Time: 11:44 PM
  * To change this template use File | Settings | File Templates.
  */
-package stateMachine {
+package controller.stateMachine {
 	import utils.IDisposable;
 
 	public class StateMachine implements IDisposable {

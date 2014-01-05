@@ -8,10 +8,10 @@
 package utils {
 	import model.MainModel;
 
-	import presenter.BoardPresenter;
-	import presenter.HUDPresenter;
+	import controller.game.BoardPresenter;
+	import controller.game.HUDPresenter;
 
-	import stateMachine.main.MainStateMachine;
+	import controller.stateMachine.main.MainStateMachine;
 
 	import view.MainView;
 

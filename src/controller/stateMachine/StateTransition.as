@@ -5,7 +5,7 @@
  * Time: 11:45 PM
  * To change this template use File | Settings | File Templates.
  */
-package stateMachine {
+package controller.stateMachine {
 	public class StateTransition {
 
 		private var _triggerMessage:String;

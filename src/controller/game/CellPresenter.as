@@ -5,7 +5,7 @@
  * Time: 5:21 PM
  * To change this template use File | Settings | File Templates.
  */
-package presenter {
+package controller.game {
 
 	import flash.events.MouseEvent;
 

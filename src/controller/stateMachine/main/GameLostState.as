@@ -5,9 +5,9 @@
  * Time: 7:20 PM
  * To change this template use File | Settings | File Templates.
  */
-package stateMachine.main {
-	import stateMachine.State;
-	import stateMachine.StateMachine;
+package controller.stateMachine.main {
+	import controller.stateMachine.State;
+	import controller.stateMachine.StateMachine;
 
 	public class GameLostState extends State {
 
