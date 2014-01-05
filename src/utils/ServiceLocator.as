@@ -47,6 +47,11 @@ package utils {
 		public function get mainView():MainView { return _mainView; }
 
 		//--------------------------------------------------------
+		// Utils
+		private var _mainRandom:Rndm;
+		public function get mainRandom():Rndm { return _mainRandom; }
+
+		//--------------------------------------------------------
 		// Input
 		private var _inputController:InputController;
 		public function get inputController():InputController { return _inputController; }
@@ -69,6 +74,8 @@ package utils {
 			_mainModel = new MainModel();
 			_mainView = new MainView();
 			_mainStateMachine = new MainStateMachine();
+
+			_mainRandom = new Rndm(_mainModel.mainRandomSeed);
 			_inputController = new InputController();
 
 			_hudPresenter = new HUDPresenter();

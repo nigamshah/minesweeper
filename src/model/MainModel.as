@@ -23,6 +23,7 @@ package model {
 			gameConfig.numColumns = 9;
 			gameConfig.numRows = 9;
 			gameConfig.numMines = 10;
+			gameConfig.forceCascadeFirstMove = true;
 			_gameConfigs.push(gameConfig);
 
 			gameConfig = new GameConfig();
@@ -31,6 +32,7 @@ package model {
 			gameConfig.numColumns = 12;
 			gameConfig.numRows = 12;
 			gameConfig.numMines = 40;
+			gameConfig.forceCascadeFirstMove = true;
 			_gameConfigs.push(gameConfig);
 
 			gameConfig = new GameConfig();
@@ -39,10 +41,14 @@ package model {
 			gameConfig.numColumns = 15;
 			gameConfig.numRows = 15;
 			gameConfig.numMines = 40;
+			gameConfig.forceCascadeFirstMove = false;
 			_gameConfigs.push(gameConfig);
 
 		}
 
+		public function get mainRandomSeed():int {
+			return 12345;
+		}
 		public function get currentGameModel():GameModel {
 			return _currentGameModel;
 		}

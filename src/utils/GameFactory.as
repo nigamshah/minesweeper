@@ -23,7 +23,7 @@ package utils {
 			gameModel.boardModel = new BoardModel();
 			gameModel.boardModel.numColumns = gameConfig.numColumns;
 			gameModel.boardModel.numRows= gameConfig.numRows;
-			gameModel.boardModel.numMines = gameConfig.numMines;
+			gameModel.boardModel.numMines = 0;
 			gameModel.boardModel.numFlags = 0;
 
 			// cells
@@ -41,7 +41,6 @@ package utils {
 			gameModel.boardModel.cells = cells;
 			return gameModel;
 		}
-
 
 	}
 }

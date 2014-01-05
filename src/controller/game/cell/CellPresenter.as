@@ -70,12 +70,14 @@ package controller.game.cell {
 			if (ServiceLocator.instance.inputController.ctlDown) {
 				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_TOGGLE_FLAG);
 			} else {
+				ServiceLocator.instance.boardPresenter.onClearCell(this);
 				_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_USER_CLEAR_CELL);
 				if (_cellModel.occupied) {
 					_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_MINE_TRIPPED);
 				}
 			}
 		}
+
 	}
 }
 class Lock {}

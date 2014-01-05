@@ -21,7 +21,7 @@ package controller.game {
 
 		public function reset():void {
 			_hudView.setSecondsElapsed(0);
-			_hudView.setMinesRemaining(ServiceLocator.instance.mainModel.currentGameModel.boardModel.numMines);
+			_hudView.setMinesRemaining(ServiceLocator.instance.mainModel.currentGameModel.gameConfig.numMines);
 		}
 	}
 }

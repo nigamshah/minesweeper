@@ -39,8 +39,9 @@ package view {
 			_mc.mine.visible = val;
 		}
 		public function setNumAdjacentMines(num:int):void {
-			_mc.numAdjacentMinesText.text = String(num);
+			_mc.numAdjacentMinesText.text = num ? String(num) : "";
 		}
+
 		public function setExploded(val:Boolean):void {
 			_mc.cellBackingExploded.visible = val;
 		}

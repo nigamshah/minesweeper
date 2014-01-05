@@ -13,6 +13,7 @@ package config {
 		private var _numColumns:int;
 		private var _numRows:int;
 		private var _numMines:int;
+		private var _forceCascadeFirstMove:Boolean;
 
 		public function GameConfig() {
 		}
@@ -56,5 +57,14 @@ package config {
 		public function set numMines(value:int):void {
 			_numMines = value;
 		}
+
+		public function get forceCascadeFirstMove():Boolean {
+			return _forceCascadeFirstMove;
+		}
+
+		public function set forceCascadeFirstMove(value:Boolean):void {
+			_forceCascadeFirstMove = value;
+		}
+
 	}
 }
