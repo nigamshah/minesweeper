@@ -29,6 +29,8 @@ package controller.main {
 		override public function onExit(data:Object):void {
 			ServiceLocator.instance.mainModel.currentGameModel.endGame();
 			ServiceLocator.instance.hudPresenter.endGame();
+			ServiceLocator.instance.boardPresenter.endGame();
+
 		}
 
 		private function onBoardCleared(evt:Event):void {

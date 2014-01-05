@@ -9,6 +9,8 @@ package controller.main {
 	import controller.stateMachine.State;
 	import controller.stateMachine.StateMachine;
 
+	import utils.ServiceLocator;
+
 	public class GameWonState extends State {
 		public static const ID:String = "gameWon";
 
@@ -18,6 +20,7 @@ package controller.main {
 
 		override public function onEnter(data:Object):void {
 			trace("YOU WIN!!!!");
+			ServiceLocator.instance.mainView.gameView.gameWon();
 		}
 	}
 }

@@ -22,6 +22,7 @@ package controller.main {
 		override public function onEnter(data:Object):void {
 			trace("YOU LOSE!!!!");
 			ServiceLocator.instance.boardPresenter.revealAllMines();
+			ServiceLocator.instance.mainView.gameView.gameLost();
 		}
 	}
 }

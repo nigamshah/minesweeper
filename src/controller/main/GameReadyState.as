@@ -27,13 +27,16 @@ package controller.main {
 		}
 
 		override public function onEnter(data:Object):void {
-			var gameConfig:GameConfig = GameConfig(data);
+
+			var gameConfig:GameConfig = data ? GameConfig(data) : ServiceLocator.instance.mainModel.currentGameModel.gameConfig;
+
 			trace("about to set up GameModel of type = " + gameConfig.id);
 
 			ServiceLocator.instance.mainModel.currentGameModel = GameFactory.createGameModel(gameConfig);
 
 			ServiceLocator.instance.hudPresenter.reset();
 			ServiceLocator.instance.boardPresenter.reset();
+			ServiceLocator.instance.mainView.gameView.reset();
 
 			ServiceLocator.instance.mainView.gameView.visible = true;
 			ServiceLocator.instance.mainView.menuView.visible = false;

@@ -46,6 +46,12 @@ package controller.game {
 				}
 			}
 			_boardView.resetPosition();
+			_boardView.mouseEnabled = true;
+			_boardView.mouseChildren = true;
+		}
+		public function endGame():void {
+			_boardView.mouseEnabled = false;
+			_boardView.mouseChildren = false;
 		}
 
 		public function toggleFlag(cell:CellPresenter):void {
