@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bd4a6dd-3921-44d6-b7bc-f3ecd5d68a66" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/input/InputController.as" afterPath="$PROJECT_DIR$/src/controller/input/InputController.as" />
     </list>
     <ignored path="minesweeper.iws" />
     <ignored path=".idea/workspace.xml" />

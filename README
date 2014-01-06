@@ -6,3 +6,9 @@ https://github.com/nigamshah/minesweeper
 Play on the web
 http://nigam.biz/minesweeper/
 
+input:
+
+clear a cell: click an unflagged cell
+flag or unflag a cell: ctl-click or cmd-click or shift-click
+
+Clear all the cells without mines to win the game.
