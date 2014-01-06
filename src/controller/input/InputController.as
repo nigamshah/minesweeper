@@ -13,21 +13,20 @@ package controller.input {
 
 	public class InputController {
 
-		private var _ctlDown:Boolean;
-		public function get ctlDown():Boolean {	return _ctlDown; }
+		private var _secondaryKeyDown:Boolean;
+		public function get secondaryKeyDown():Boolean {	return _secondaryKeyDown; }
 
 		public function InputController() {
 			ServiceLocator.instance.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 			ServiceLocator.instance.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
-
 		}
 
 		private function onKeyDown(evt:KeyboardEvent):void {
-			_ctlDown = evt.ctrlKey;
+			_secondaryKeyDown = evt.ctrlKey || evt.shiftKey;
 		}
 
 		private function onKeyUp(evt:KeyboardEvent):void {
-			_ctlDown = evt.ctrlKey;
+			_secondaryKeyDown = evt.ctrlKey || evt.shiftKey;
 		}
 	}
 }

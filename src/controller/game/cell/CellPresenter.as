@@ -65,7 +65,7 @@ package controller.game.cell {
 			_cellStateMachine.handleTrigger(CellStateMachine.TRIGGER_RESET);
 		}
 		private function onClick(evt:MouseEvent):void {
-			if (ServiceLocator.instance.inputController.ctlDown) {
+			if (ServiceLocator.instance.inputController.secondaryKeyDown) {
 				ServiceLocator.instance.boardPresenter.toggleFlag(this);
 			} else {
 				ServiceLocator.instance.boardPresenter.clearCell(this);

@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3bd4a6dd-3921-44d6-b7bc-f3ecd5d68a66" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" afterPath="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/GameReadyState.as" afterPath="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/BoardModel.as" afterPath="$PROJECT_DIR$/src/model/BoardModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/MainModel.as" afterPath="$PROJECT_DIR$/src/model/MainModel.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" afterPath="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/input/InputController.as" afterPath="$PROJECT_DIR$/src/controller/input/InputController.as" />
     </list>
     <ignored path="minesweeper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,8 +70,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -81,10 +80,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainModel.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainModel.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="51" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.6296296">
+            <state line="43" column="51" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputController.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/input/InputController.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="60" selection-start="864" selection-end="864" vertical-scroll-proportion="0.84656084">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Minesweeper.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Minesweeper.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,6 +111,15 @@
         <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="142" column="38" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellPresenter.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="60" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,9 +138,7 @@
         <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#173#199#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/model/CellModel.as" />
         <option value="$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as" />
         <option value="$PROJECT_DIR$/src/controller/game/cell/ExplodedState.as" />
         <option value="$PROJECT_DIR$/src/controller/game/cell/RevealedState.as" />
@@ -148,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" />
         <option value="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
         <option value="$PROJECT_DIR$/src/model/MainModel.as" />
+        <option value="$PROJECT_DIR$/src/controller/input/InputController.as" />
       </list>
     </option>
   </component>
@@ -342,6 +366,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minesweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minesweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="notes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -401,11 +451,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -464,6 +514,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -490,24 +558,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -733,21 +783,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/GameView.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="71" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/main/GameWonState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="555" selection-end="607" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/main/GameLostState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="65" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/MainStateMachine.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="8" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" />
@@ -793,32 +828,41 @@
         <state line="74" column="32" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
+    <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#173#199#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="43" column="51" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="38" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="142" column="38" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/game/cell/CellPresenter.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="60" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/GameReadyState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="56" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+        <state line="41" column="56" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
+    <entry file="file://$PROJECT_DIR$/src/controller/input/InputController.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="51" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.6296296">
+        <state line="28" column="60" selection-start="864" selection-end="864" vertical-scroll-proportion="0.84656084">
           <folding />
         </state>
       </provider>
