@@ -6,10 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 package model {
-	import controller.main.MainStateMachine;
-
 	import flash.events.Event;
-
 	import flash.events.EventDispatcher;
 	import flash.utils.Dictionary;
 

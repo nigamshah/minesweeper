@@ -7,7 +7,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/main/GameReadyState.as" afterPath="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/BoardModel.as" afterPath="$PROJECT_DIR$/src/model/BoardModel.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/MainModel.as" afterPath="$PROJECT_DIR$/src/model/MainModel.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/EnumerableUtils.as" afterPath="$PROJECT_DIR$/src/utils/EnumerableUtils.as" />
     </list>
     <ignored path="minesweeper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,8 +71,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -82,22 +81,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HUDPresenter.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/game/HUDPresenter.as">
+      <file leaf-file-name="MainModel.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#183#209#0" expanded="true" />
-              </folding>
+            <state line="43" column="51" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.6296296">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainModel.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
+      <file leaf-file-name="BoardPresenter.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="35" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
+            <state line="142" column="38" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,62 +102,18 @@
       <file leaf-file-name="GameReadyState.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/main/GameReadyState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="58" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameFactory.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/GameFactory.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+            <state line="41" column="56" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnumerableUtils.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/EnumerableUtils.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellModel.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/CellModel.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="32" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!block;n#create#0;n#CellModel#0;n#model#0" expanded="false" />
-                <element signature="n#!!block;n#releaseToPool#0;n#CellModel#0;n#model#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardPresenter.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="29" selection-start="4077" selection-end="4077" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#183#225#0" expanded="true" />
-                <element signature="n#!!block;n#getAllNeighbors#0;n#BoardPresenter#0;n#game#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardModel.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BoardModel.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="24" selection-start="3737" selection-end="3737" vertical-scroll-proportion="3.7005649">
+            <state line="18" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#173#213#0" expanded="true" />
+                <element signature="e#173#199#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,9 +145,9 @@
         <option value="$PROJECT_DIR$/src/view/CellView.as" />
         <option value="$PROJECT_DIR$/src/utils/EnumerableUtils.as" />
         <option value="$PROJECT_DIR$/src/model/BoardModel.as" />
-        <option value="$PROJECT_DIR$/src/model/MainModel.as" />
-        <option value="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
         <option value="$PROJECT_DIR$/src/controller/game/BoardPresenter.as" />
+        <option value="$PROJECT_DIR$/src/controller/main/GameReadyState.as" />
+        <option value="$PROJECT_DIR$/src/model/MainModel.as" />
       </list>
     </option>
   </component>
@@ -232,40 +184,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Default">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minesweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="minesweeper">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minesweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -420,16 +348,40 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Default">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="minesweeper">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -449,11 +401,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -512,24 +464,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -556,6 +490,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -689,9 +641,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4663144" sideWeight="0.49423632" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4649934" sideWeight="0.49423632" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50072044" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21438849" sideWeight="0.39630118" order="2" side_tool="true" content_ui="tabs" />
@@ -702,10 +653,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21541786" sideWeight="0.5336856" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21541786" sideWeight="0.5350066" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -783,142 +735,91 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/view/GameView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="71" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#172#198#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="34" column="71" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/GameWonState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="555" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="22" column="12" selection-start="555" selection-end="607" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/GameLostState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="65" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="24" column="65" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/MainStateMachine.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="23" column="8" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MenuView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/HUDView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="90" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#173#194#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="58" column="90" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/main/GameInProgressState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="61" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="31" column="61" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/CellView.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.37296036">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#173#195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/CellModel.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="32" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#create#0;n#CellModel#0;n#model#0" expanded="false" />
-            <element signature="n#!!block;n#releaseToPool#0;n#CellModel#0;n#model#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/EnumerableUtils.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="35" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/GameFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.37296036" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/game/HUDPresenter.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#183#209#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="54" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/main/GameReadyState.as">
+    <entry file="file://$PROJECT_DIR$/src/utils/GameFactory.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="58" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+        <state line="18" column="46" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/EnumerableUtils.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CellModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="32" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#173#199#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/game/BoardPresenter.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="29" selection-start="4077" selection-end="4077" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#183#225#0" expanded="true" />
-            <element signature="n#!!block;n#getAllNeighbors#0;n#BoardPresenter#0;n#game#0" expanded="false" />
-          </folding>
+        <state line="142" column="38" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/BoardModel.as">
+    <entry file="file://$PROJECT_DIR$/src/controller/main/GameReadyState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="24" selection-start="3737" selection-end="3737" vertical-scroll-proportion="3.7005649">
-          <folding>
-            <element signature="e#173#213#0" expanded="true" />
-          </folding>
+        <state line="41" column="56" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/MainModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="51" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.6296296">
+          <folding />
         </state>
       </provider>
     </entry>

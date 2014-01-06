@@ -28,26 +28,26 @@ package model {
 
 			gameConfig = new GameConfig();
 			gameConfig.id = "medium";
-			gameConfig.description = "Medium: 12x12, 30 mines";
+			gameConfig.description = "Medium: 12x12, 20 mines";
 			gameConfig.numColumns = 12;
 			gameConfig.numRows = 12;
-			gameConfig.numMines = 30;
+			gameConfig.numMines = 20;
 			gameConfig.forceCascadeFirstMove = true;
 			_gameConfigs.push(gameConfig);
 
 			gameConfig = new GameConfig();
 			gameConfig.id = "hard";
-			gameConfig.description = "Hard: 15x15, 40 mines";
+			gameConfig.description = "Hard: 15x15, 30 mines";
 			gameConfig.numColumns = 15;
 			gameConfig.numRows = 15;
-			gameConfig.numMines = 40;
-			gameConfig.forceCascadeFirstMove = false;
+			gameConfig.numMines = 30;
+			gameConfig.forceCascadeFirstMove = true;
 			_gameConfigs.push(gameConfig);
 
 		}
 
 		public function get mainRandomSeed():int {
-			return 12345;
+			return 0;
 		}
 		public function get currentGameModel():GameModel {
 			return _currentGameModel;

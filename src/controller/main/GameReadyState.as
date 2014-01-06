@@ -29,7 +29,7 @@ package controller.main {
 		override public function onEnter(data:Object):void {
 
 			if (ServiceLocator.instance.mainModel.currentGameModel) {
-				ServiceLocator.instance.boardPresenter.dispose();
+				ServiceLocator.instance.boardPresenter.dispose(); // dispose of the old board
 			}
 
 			var gameConfig:GameConfig = data ? GameConfig(data) : ServiceLocator.instance.mainModel.currentGameModel.gameConfig;

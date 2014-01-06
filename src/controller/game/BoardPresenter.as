@@ -139,7 +139,9 @@ package controller.game {
 				}
 			}
 			_cells = null;
-			_boardModel.dispose();
+			if (_boardModel) {
+				_boardModel.dispose();
+			}
 		}
 	}
 }
