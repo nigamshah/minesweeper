@@ -25,8 +25,7 @@ package model {
 		private var _numMines:int;
 		private var _numFlags:int;
 		private var _cells:Vector.<Vector.<CellModel>>;
-		private var _cellStatus:Dictionary;
-		private var _numClearedCells:int;
+		private var _unclearedSafeCells:Dictionary;
 
 		public function get numColumns():int {
 			return _numColumns;
@@ -57,12 +56,11 @@ package model {
 			_numRows = numRows;
 			_numMines = 0;
 			_numFlags = 0;
-			_numClearedCells = 0;
+			_unclearedSafeCells = new Dictionary();
 		}
 
 		public function generateMines(cellModel:CellModel):void {
 			trace("boardModel.generateMines");
-			_cellStatus = new Dictionary(true);
 
 			// determine eligible cells, put them in a 1D array
 			var eligibleCells:Array = new Array();
@@ -73,6 +71,8 @@ package model {
 
 			for (col = 0; col < _numColumns; col++) {
 				for (row = 0; row < _numRows; row++) {
+					_unclearedSafeCells[_cells[col][row]] = true;
+
 					// is it a neighbor? then continue
 					if (col >= cellModel.columnIndex - safeRange &&
 						col <= cellModel.columnIndex + safeRange &&
@@ -86,11 +86,13 @@ package model {
 
 			// shuffle array
 			eligibleCells = EnumerableUtils.ArrayShuffle(eligibleCells);
+			_numMines = Math.min(_numMines, eligibleCells.length);
 
 			// set mines
 			_numMines = ServiceLocator.instance.mainModel.currentGameModel.gameConfig.numMines;
 			for (var i:int = 0; i < _numMines; i++) {
 				CellModel(eligibleCells[i]).occupied = true;
+				delete _unclearedSafeCells[eligibleCells[i]];
 			}
 
 			// set numAdjacentMines
@@ -117,9 +119,9 @@ package model {
 			dispatchEvent(new Event(Event.CHANGE));
 		}
 
-		public function clearCell():void {
-			_numClearedCells++;
-			if (_numClearedCells == (_numColumns * _numRows) - _numMines) {
+		public function clearCell(cellModel:CellModel):void {
+			delete _unclearedSafeCells[cellModel];
+			if (EnumerableUtils.isNullOrEmpty(_unclearedSafeCells)) {
 				dispatchEvent(new Event(BOARD_CLEARED));
 			}
 			dispatchEvent(new Event(Event.CHANGE));
@@ -140,6 +142,7 @@ package model {
 				}
 			}
 			_cells = null;
+			_unclearedSafeCells = null;
 		}
 
 	}

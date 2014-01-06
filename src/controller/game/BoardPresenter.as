@@ -84,11 +84,11 @@ package controller.game {
 
 			queueCell(cell);
 			cell.clearCell();
-			_boardModel.clearCell();
+			_boardModel.clearCell(cell.cellModel);
 
 			for (var i:int = 1; i < queue.length; i++) {
 				queue[i].revealCell();
-				_boardModel.clearCell();
+				_boardModel.clearCell(queue[i].cellModel);
 			}
 		}
 
@@ -139,6 +139,7 @@ package controller.game {
 				}
 			}
 			_cells = null;
+			_boardModel.dispose();
 		}
 	}
 }

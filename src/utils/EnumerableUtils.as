@@ -28,5 +28,11 @@ package utils {
 			}
 			return arr;
 		}
+		public static function isNullOrEmpty(obj:*):Boolean {
+			for (var key:* in obj) {
+				return false;
+			}
+			return true;
+		}
 	}
 }

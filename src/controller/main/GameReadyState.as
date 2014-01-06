@@ -28,6 +28,10 @@ package controller.main {
 
 		override public function onEnter(data:Object):void {
 
+			if (ServiceLocator.instance.mainModel.currentGameModel) {
+				ServiceLocator.instance.boardPresenter.dispose();
+			}
+
 			var gameConfig:GameConfig = data ? GameConfig(data) : ServiceLocator.instance.mainModel.currentGameModel.gameConfig;
 
 			trace("about to set up GameModel of type = " + gameConfig.id);

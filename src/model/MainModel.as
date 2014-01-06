@@ -31,13 +31,13 @@ package model {
 			gameConfig.description = "Medium: 12x12, 30 mines";
 			gameConfig.numColumns = 12;
 			gameConfig.numRows = 12;
-			gameConfig.numMines = 40;
+			gameConfig.numMines = 30;
 			gameConfig.forceCascadeFirstMove = true;
 			_gameConfigs.push(gameConfig);
 
 			gameConfig = new GameConfig();
 			gameConfig.id = "hard";
-			gameConfig.description = "Hard: 18x18, 40 mines";
+			gameConfig.description = "Hard: 15x15, 40 mines";
 			gameConfig.numColumns = 15;
 			gameConfig.numRows = 15;
 			gameConfig.numMines = 40;
